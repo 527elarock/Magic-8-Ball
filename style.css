@@ -1,0 +1,119 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #030027;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Main content */
+main {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button Styles */
+button.btn-primary {
+    margin-top: 25px;
+    background: #0d6efd;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.6);
+    cursor: pointer;
+}
+
+button.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #0d6efd, 0 0 50px #0d6efd;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #030027;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px white, 0 0 60px rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+    max-width: 400px;
+    width: 90%;
+    animation: glowPulse 2s infinite alternate, float 3s infinite ease-in-out;
+    border: 2px solid #00ffff;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    margin: 10px 5px;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 20px white, 0 0 40px rgba(0, 255, 255, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 40px white, 0 0 80px rgba(0, 255, 255, 0.5);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes textGlow {
+    0% {
+        filter: drop-shadow(0 0 5px white);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px #ff00ff);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px white);
+    }
+}
